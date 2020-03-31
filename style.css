@@ -12,8 +12,85 @@ body{
 	
 }
 
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+.container{
+	width: 95%;
+	margin: 0 auto;
+}
+
+
 /*-------------Header----------------*/
 header{
-	/*position: absolute;*/
-	margin-top: 10px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 10px;
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li{
+	display: inline-block;
+	margin: 20px;
+}
+
+nav a{
+	font-weight: 900;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 7px;
+	color: #FFF;
+}
+
+nav a: hover, nav a: focus {
+	color: #DDD;
+}
+
+
+
+/*-------------Typography----------------*/
+.title{
+	font-size: 56px;
+}
+.title span{
+	display: block;
+}
+
+
+/*-------------BUTTONS----------------*/
+.button{
+	display: inline-block;
+	font-size: 28px;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-width: 3px;
+	border-style: solid;
+	padding: 15px;
+}
+.button-accent{
+	color: #880E4F;
+	border-color: #880E4F;
+}
+
+.button-accent:hover,
+.button-accent:focus{
+	background: #C2185B;
+	color:#FFF;
+}
+
+/*-------------Homepage----------------*/
+
+.homepage{
+	background-image: url(img/homepage.jpg);
+	padding: 300px;
+	color: #FFF;
 }
