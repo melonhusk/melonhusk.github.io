@@ -4,6 +4,7 @@ url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700;900&displ
 
 *{
 	box-sizing: border-box;
+	transition: all ease-in-out 250ms;
 }
 
 
@@ -23,6 +24,14 @@ img{
 	margin: 0 auto;
 	max-width: 1120px;
 }
+
+.clearfix::after,
+section::after{
+	content: ''
+	display: block;
+	clear: both;
+}
+
 
 /*------TYPOGRAPHY------*/
 h1 {
@@ -76,6 +85,20 @@ p:last-of-type{
 	padding: 8px 5px;
 }
 
+@media(min-width: 900px){
+	.button{
+		font-size: 30px;
+	}
+}
+
+.button-small{
+	font-size: 15px;
+	padding: 5px;
+	
+}
+
+
+
 .button-accent{
 	color: #8B0000;
 	border-color: #8B0000;
@@ -87,11 +110,7 @@ p:last-of-type{
 	color: #FFF;
 }
 
-@media(min-width: 900px){
-	.button{
-		font-size: 30px;
-	}
-}
+
 
 
 /*------HEADER------*/
@@ -121,13 +140,20 @@ nav a{
 	font-weight: 900;
 	text-decoration: none;
 	text-transform: uppercase;
+	font-family: helvetica;
 	font-size: 24;
-	padding: 2px;
-	color: #FFF
+	padding: 4px;
+	border-radius: 20px;
+	color: #FFF;
+	background-image: linear-gradient(120deg, transparent 50%, #D3D3D3 40%);
+	background-size: 250%;
+	transition: all 0.4s;
 }
 
 nav a:hover, nav a:focus{
-	color:#DDD;
+	background-position: 100%;
+	color:#313131;
+	transform: translateX(7px);
 }
 
 @media (min-width: 900px)
@@ -218,3 +244,63 @@ nav a:hover, nav a:focus{
 }
 
 
+/*------PORTFOLIO------*/
+
+.portfolio{
+	margin : 4px 0;
+	
+}
+
+
+.port-item{
+	margin: 0px;
+	position: relative;
+}
+
+.port-item img{
+	display: block;
+}
+
+.portDescription{
+	position: absolute;
+	z-index: 100;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	color: white;
+	background: rgba(0,0,0,.5);
+	padding-bottom: 30px;
+}
+
+@media(min-width: 552px){
+	.port-item{
+		width: 50%;
+		float: left;
+		overflow: hidden;
+	}
+	.portDescription{
+		transform: translateY(160%);
+	}
+	
+	.port-item:hover .portDescription{
+		transform: translateY(0%);
+	}
+}
+
+@media(min-width: 1020px){
+	.port-item{
+		width: 20%;
+	}
+}
+
+
+/*------CTA------*/
+.cta{
+	background-color: #008080;
+	padding: 40px 0 0;
+}
+
+
+.footer{
+	img-align: center;
+}
