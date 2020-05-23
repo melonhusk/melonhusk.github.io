@@ -167,11 +167,8 @@ nav a:hover, nav a:focus{
 		float: right;
 		font-size: 22px;
 	}
-	.header{
-		h2{
-			float: left;
-			
-		}
+	h2{
+		float: left;	
 	}
 }
 
@@ -197,7 +194,7 @@ nav a:hover, nav a:focus{
 .home-about-text{
 	background-color: #232323;
 	padding: 48px;
-	width: 100vw;
+	width: 76vw;
 	margin-left: -2.6%;
 	outline: 2px solid #00FF6C;
 	outline-offset: -32px;
@@ -298,7 +295,7 @@ nav a:hover, nav a:focus{
 	font-size: 18px;
 	font-weight: 500;
 }
-.card-text h2{
+.card-text h3{
 	margin-top: 0;
 	font-size: 28px;
 }
